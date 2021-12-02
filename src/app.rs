@@ -1,10 +1,8 @@
 use crate::block::Block;
-use crate::helpers::{calculate_hash, hash_to_binary_representation};
+use crate::helpers::{calculate_hash, hash_to_binary_representation, DIFFICULTY_PREFIX};
 use chrono::Utc;
 use hex::{decode, encode};
 use log::{error, warn};
-
-const DIFFICULTY_PREFIX: &str = "00";
 
 pub struct App {
     pub blocks: Vec<Block>,

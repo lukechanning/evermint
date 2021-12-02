@@ -1,5 +1,7 @@
 use sha2::{Digest, Sha256};
 
+pub const DIFFICULTY_PREFIX: &str = "00";
+
 /// Calculate Hash
 ///
 /// Calculates hash of passed block information
