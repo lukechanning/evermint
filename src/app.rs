@@ -67,7 +67,7 @@ impl App {
         true
     }
 
-    fn choose_chain(&mut self, local: Vec<Block>, remote: Vec<Block>) -> Vec<Block> {
+    pub fn choose_chain(&mut self, local: Vec<Block>, remote: Vec<Block>) -> Vec<Block> {
         let is_local_valid = self.is_chain_valid(&local);
         let is_remote_valid = self.is_chain_valid(&remote);
 
@@ -86,7 +86,7 @@ impl App {
         }
     }
 
-    fn try_add_block(&mut self, block: Block) {
+    pub fn try_add_block(&mut self, block: Block) {
         let latest_block = self.blocks.last().expect("there is at least one block");
         if self.is_block_valid(&block, latest_block) {
             self.blocks.push(block);
