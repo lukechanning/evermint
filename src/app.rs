@@ -9,11 +9,11 @@ pub struct App {
 }
 
 impl App {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self { blocks: vec![] }
     }
 
-    fn genesis(&mut self) {
+    pub fn genesis(&mut self) {
         let genesis_block = Block {
             id: 0,
             timestamp: Utc::now().timestamp(),
